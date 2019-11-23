@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html manifest="appcache.manifest">
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Atlas Gubernur Pertama Indonesia</title>
+
+    <!-- bootstrap CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/leaflet.css">
+
+</head>
+<body>
+
+    <div class="navbari" id="myDIV">
+      <a href="index.html" class="nav-jabar">ATLAS</a>
+      <a href="jabar.html" class="nav-jabar active">1890</a>
+      <a href="#sumatera_1917.html" class="nav-jabar">1909</a>
+      <a href="#sumatera_1924.html" class="nav-jabar">1911</a>
+      <a href="#sumatera_1928.html" class="nav-jabar">1913</a>
+      <a href="#sumatera_1931.html" class="nav-jabar">1915</a>
+      <a href="#sumatera_1933.html" class="nav-jabar">1919</a>
+      <a href="#sumatera_1934.html" class="nav-jabar">1929</a>
+      <a href="#sumatera_1936.html" class="nav-jabar">1931</a>
+      <a href="#sumatera_1939.html" class="nav-jabar">1932</a>
+      <a href="#sumatera_1945.html" class="nav-jabar">1936</a>
+      <a href="#sumatera_1997.html" class="nav-jabar">1938</a>
+      <a href="#jabar.html" class="nav-jabar">1943</a>
+      <a href="#jabar.html" class="nav-jabar">1945</a>
+      <a href="#jabar.html" class="nav-jabar">1956</a>
+      <a href="#jabar.html" class="nav-jabar">1964</a>
+      <a href="#jabar.html" class="nav-jabar">1976</a>
+    </div>
+
+    <div id="map"></div>
+
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+            <div class="modal-content" style="overflow-y: scroll; overflow-x: hidden; max-height: 100%">
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        <div class="col-md-12 center-img">
+                            <video id="playauto" width="421" height="360" style="padding-top: 0px;" controls>
+                                <source src="assets/video/jabar-video.mp4" type="video/mp4">
+                            </video>
+                            <!-- <img src="assets/images/png/holand-island.png"> -->
+                        </div>
+                        <div class="text">
+                            
+                            <h2>Kiprah Sebelum Gubernur (Kelahiran)</h2>
+                            
+                            <p> Mas Soetardjo Kartohadikoesoemo lahir di Desa Kunduran, Blora, Jawa Timur, 22 Oktober 1890 dari keluarga priayi . Ayahanda Soetardjo yakni Mas Kartoredjo adalah Wedana Bancar, Kabupaten Tuban, Jawa Timur yang masih keturunan keluarga pemerintahan dari Madura . Sedangkan ibunda beliau yang bernama Mas Ayu Kartoredjo merupakan keturunan keluarga pemerintahan dari Banten . Kakek Soetardjo dari pihak ayah yang bernama Kiai Kartowijoyo adalah Lurah Pandean, Kabupaten Tuban . Dapat dikatakan keluarga Soetardjo adalah keluarga birokrat karena lima orang kakak dan dua orang adiknya bekerja sebagai pegawai negeri kecuali saudara wanitanya yang menikah dengan pegawai negeri .
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
+
+    <!-- Scripts -->
+    
+    <script src="assets/js/leaflet.js"></script>
+    <script src="assets/js/event.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/maps/map-jabar-1890.js"></script>
+    <script src="assets/js/run.js"></script>
+
+    <script type="text/javascript">
+
+        myAutoModal();
+        //Get the Modal
+        var modal = document.getElementById("myModal");
+
+        function myAutoModal(){
+            setTimeout(function(){
+                modal.style.display = "block";
+
+                document.getElementById('playauto').play();
+
+                
+                }, 1000);
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                  modal.style.display = "none";
+
+                  document.getElementById('playauto').pause();
+                }
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        function myOnclick(){
+          modal.style.display = "block";
+ 
+
+          document.getElementById('playauto').play();
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+
+          document.getElementById('playauto').pause();
+        }
+    </script>
+
+    <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("nav");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+    <!-- <script>
+
+      // Nothing new here...it's all in the CSS!
+      // And don't forget to activate the pointerEvents option
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
+    </script> -->
+
+</body>
+</html>

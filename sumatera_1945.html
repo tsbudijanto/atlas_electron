@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html manifest="appcache.manifest">
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<title>Atlas Gubernur Pertama Indonesia</title>
+
+	<!-- bootstrap CSS file -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/normalize.css">
+
+	<!-- main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/leaflet.css">
+
+</head>
+<body>
+
+	<div class="navbari" id="myDIV">
+		<a href="index.html" class="nav">ATLAS</a>
+	  <a href="sumatera_1905.html" class="nav">1905</a>
+	  <a href="sumatera_1917.html" class="nav">1917</a>
+	  <a href="sumatera_1924.html" class="nav">1924</a>
+	  <a href="sumatera_1928.html" class="nav">1928</a>
+	  <a href="sumatera_1931.html" class="nav">1931</a>
+	  <a href="#sumatera_1933.html" class="nav">1933</a>
+	  <a href="#sumatera_1934.html" class="nav">1934</a>
+	  <a href="#sumatera_1936.html" class="nav">1936</a>
+	  <a href="#sumatera_1939.html" class="nav">1939</a>
+	  <a href="sumatera_1945.html" class="nav active">1945</a>
+	  <a href="#sumatera_1997.html" class="nav">1997</a>
+	</div>
+
+	<div id="map"></div>
+
+
+	<!-- <div id="myModal" class="modal">
+    	<span class="close">&times;</span>
+    		<div class="modal-content">
+    			<div class="modal-body">
+    				<div class="row">
+	    				
+	    				<div class="col-md-6 center-img">
+	    					<video id="playauto" width="439" height="360" style="padding-top: 113px;" controls>
+	    						<source src="assets/video/palembang.mp4" type="video/mp4">
+	    					</video>
+	    				</div>
+	    				<div class="col-md-6 text">
+	    					<h2>Putra bangsawan Aceh</h2>
+							<p>Jejak langkah Mohammad Hasan bisa ditelusuri mulai dari Desa Peukan Set, yang pada zaman kolonial merupakan bagian dari landschap pineung di afdeeling pidie, Aceh. Berdasarkan catatan administratif, Hasan lahir disana pada 4 april 1906. Namun secara faktual, Hasan lahir pad 4 april 1905. Ayahnya, Teuku Bintara Pineung Ibrahim, adalah uleebalang atau penguasa lokal wilayah pinenug, pidie. Ibunya Cut Manyak, adlah putri uleebalang di wilayah keumangan, pidie, dan merupakan keturunan Hadrami dari Yaman. Sebagian besar masa kecil Hasan dihabiskan dikampungnya, Lampoh Saka, Sigli.</p>
+	    				</div>
+	    			</div>
+    			</div>
+    		</div>	
+    </div>
+
+    <div id="myModali" class="modal">
+    	<span class="closi">&times;</span>
+    		<div class="modal-content">
+    			<div class="modal-body">
+    				<div class="row">
+	    				
+	    				<div class="col-md-6 center-img">
+	    					<video id="playautoi" width="439" height="360" style="padding-top: 113px;" controls>
+	    						<source src="assets/video/palembang.mp4" type="video/mp4">
+	    					</video>
+	    				</div>
+	    				<div class="col-md-6 text">
+	    					<h2>Putra bangsawan Aceh</h2>
+							<p>Jejak langkah Mohammad Hasan bisa ditelusuri mulai dari Desa Peukan Set, yang pada zaman kolonial merupakan bagian dari landschap pineung di afdeeling pidie, Aceh. Berdasarkan catatan administratif, Hasan lahir disana pada 4 april 1906. Namun secara faktual, Hasan lahir pad 4 april 1905. Ayahnya, Teuku Bintara Pineung Ibrahim, adalah uleebalang atau penguasa lokal wilayah pinenug, pidie. Ibunya Cut Manyak, adlah putri uleebalang di wilayah keumangan, pidie, dan merupakan keturunan Hadrami dari Yaman. Sebagian besar masa kecil Hasan dihabiskan dikampungnya, Lampoh Saka, Sigli.</p>
+	    				</div>
+	    			</div>
+    			</div>
+    		</div>	
+    </div> -->
+
+	<!-- Scripts -->
+	
+	<script src="assets/js/leaflet.js"></script>
+	<script src="assets/js/event.js"></script>
+	<script src="assets/js/storage.js"></script>
+	<script src="assets/js/maps/map_sumatera_1945.js"></script>
+	<script src="assets/js/run.js"></script>
+
+	<!-- <script type="text/javascript">
+
+		myAutoModal();
+		//Get the Modal
+		var modal = document.getElementById("myModal");
+
+		function myAutoModal(){
+			setTimeout(function(){
+				modal.style.display = "block";
+
+				document.getElementById('playauto').play();
+
+				
+				}, 1000);
+
+				// Get the <span> element that closes the modal
+		        var span = document.getElementsByClassName("close")[0];
+
+		        // When the user clicks on <span> (x), close the modal
+		        span.onclick = function() { 
+		          modal.style.display = "none";
+
+		          document.getElementById('playauto').pause();
+				}
+		}
+	</script> -->
+
+	<script type="text/javascript">
+    	// Get the modal
+        var modal = document.getElementById("myModal");
+        
+        function myOnclick(){
+          modal.style.display = "block";
+ 
+
+          document.getElementById('playauto').play();
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+
+          document.getElementById('playauto').pause();
+        }
+    </script>
+
+    <script type="text/javascript">
+    	// Get the modal
+        var modali = document.getElementById("myModali");
+        
+        function myOnclicki(){
+          modali.style.display = "block";
+ 
+
+          document.getElementById('playautoi').play();
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("closi")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modali.style.display = "none";
+
+          document.getElementById('playautoi').pause();
+        }
+    </script>
+
+	<script>
+	// Add active class to the current button (highlight it)
+	var header = document.getElementById("myDIV");
+	var btns = header.getElementsByClassName("nav");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function() {
+	  var current = document.getElementsByClassName("active");
+	  current[0].className = current[0].className.replace(" active", "");
+	  this.className += " active";
+	  });
+	}
+	</script>
+
+	<!-- <script>
+
+	  // Nothing new here...it's all in the CSS!
+	  // And don't forget to activate the pointerEvents option
+	  var scene = document.getElementById('scene');
+	  var parallax = new Parallax(scene);
+
+	</script> -->
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html manifest="appcache.manifest">
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Atlas Gubernur Pertama Indonesia</title>
+
+    <!-- bootstrap CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/leaflet.css">
+
+</head>
+<body>
+
+    <div class="navbari" id="myDIV">
+      <a href="index.html" class="nav">ATLAS</a>
+      <a href="jatim.html" class="nav">1896</a>
+      <a href="jatim-1918.html" class="nav active">1918-1926</a>
+      <a href="jatim-1929.html" class="nav">1929-1938</a>
+      <a href="jatim-1943.html" class="nav">1943</a>
+      <a href="jatim-1945.html" class="nav">1945</a>
+      <a href="jatim-1947.html" class="nav">1947</a>
+
+    </div>
+
+    <div id="map"></div>
+
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+            <div class="modal-content" style="overflow-y: scroll; overflow-x: hidden; max-height: 100%">
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        <!-- <div class="col-md-12 center-img">
+                            <video id="playauto" width="439" height="360" style="padding-top: 113px;" controls>
+                                <source src="assets/video/palembang.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/png/holand-island.png">
+                        </div> -->
+                        <div class="text">
+                            
+                            <h2>Karier Sebagai Birokrat Saat Menjadi Gediplomeerd Assistant Inlandsch Bestuursambtenaar (GAIB)</h2>
+                            
+                            <p>Soerjo mengawali karier sebagai birokrat saat menjadi GAIB (Gediplomeerd Assistant Inlandsch Bestuursambtenaar) di kantor Kontrolir Ngawi pada 1918 . Melihat bakatnya yang luar biasa, atasannya menyekolahkan Soerjo ke Sekolah Polisi di Sukabumi pada 1922 . Setelah menyelesaikan pendidikan di Sekolah Polisi, Soerjo diberikan kepercayaan menjabat sebagai wedana di wilayah Karangrejo, Glodog, Madiun . Karirnya di bidang kepamongprajaan kian melesat seiring dengan diangkatnya Soerjo menjadi asisten wedana di Madiun Kota pada 1926 .  Pada  tahun itu pula   ia kemudian diangkat menjadi juru tulis jaksa untuk selanjutnya diberi tugas sebagai mantri Kabupaten Madiun . Saat menjadi asisten wedana di Madiun pada Soerjo menemukan jodohnya yakni Raden Ayu Mustapeni, putri dari Raden Adipati Hadiwinoto, Bupati Magetan . Kendati menikahi seorang janda beranak satu, Soerjo sangat bahagia dengan pernikahan itu.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
+
+    <!-- Scripts -->
+    
+    <script src="assets/js/leaflet.js"></script>
+    <script src="assets/js/event.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/maps/map-jatim-1918.js"></script>
+    <script src="assets/js/run.js"></script>
+
+    <script type="text/javascript">
+
+        myAutoModal();
+        //Get the Modal
+        var modal = document.getElementById("myModal");
+
+        function myAutoModal(){
+            setTimeout(function(){
+                modal.style.display = "block";
+
+                document.getElementById('playauto').play();
+
+                
+                }, 1000);
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                  modal.style.display = "none";
+
+                  document.getElementById('playauto').pause();
+                }
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        function myOnclick(){
+          modal.style.display = "block";
+ 
+
+          document.getElementById('playauto').play();
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+
+          document.getElementById('playauto').pause();
+        }
+    </script>
+
+    <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("nav");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+    <!-- <script>
+
+      // Nothing new here...it's all in the CSS!
+      // And don't forget to activate the pointerEvents option
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
+    </script> -->
+
+</body>
+</html>

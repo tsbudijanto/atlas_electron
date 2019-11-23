@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html manifest="appcache.manifest">
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Atlas Gubernur Pertama Indonesia</title>
+
+    <!-- bootstrap CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/leaflet.css">
+
+</head>
+<body>
+
+    <div class="navbari" id="myDIV">
+      <a href="index.html" class="nav">ATLAS</a>
+      <a href="jatim.html" class="nav">1896</a>
+      <a href="jatim-1918.html" class="nav">1918-1926</a>
+      <a href="jatim-1929.html" class="nav">1929-1938</a>
+      <a href="jatim-1943.html" class="nav active">1943</a>
+      <a href="jatim-1945.html" class="nav">1945</a>
+      <a href="jatim-1947.html" class="nav">1947</a>
+
+    </div>
+
+    <div id="map"></div>
+
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+            <div class="modal-content" style="overflow-y: scroll; overflow-x: hidden; max-height: 100%">
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        <!-- <div class="col-md-12 center-img">
+                            <video id="playauto" width="439" height="360" style="padding-top: 113px;" controls>
+                                <source src="assets/video/palembang.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/png/holand-island.png">
+                        </div> -->
+                        <div class="text">
+                            
+                            <h2>Pejabat Di Masa Pendudukan Jepang</h2>
+                            
+                            <p>Tidak seperti di wilayah lain yang menyambut kedatangan pasukan Jepang pada awal Perang Asia Timur Raya, masyarakat Magetan tidak berani untuk keluar rumah . Mereka hanya bisa menunggu dengan cemas, apa yang akan terjadi kemudian . Soerjo yang saat itu menjabat sebagai Bupati Magetan berupaya agar kehidupan masyarakat kembali normal dengan menyerukan agar rakyat tidak khawatir dengan situasi yang tengah terjadi . Keamanan Magetan ia tunjukkan dengan berjalan-jalan di alun-alun Magetan bersama istrinya . Namun seiring dengan kedatangan pasukan Jepang, Soerjo tidak bisa berbuat apa-apa selain menerima uluran kerja sama dengan mereka kendati ia sesungguhnya membenci perilaku penguasa militer Jepang . Ia bahkan menolak memenuhi permintaan penguasa militer Jepang mengumpulkan perempuan muda untuk diserahkan kepada para serdadu sebagai pelampiasan nafsu mereka .
+                            </p>
+
+                            <p>Guna mengatur tata kelola pemerintahan, maka pada September 1943, mereka mengangkat tujuh orang Indonesia terkemuka sebagai penasihat pada pemerintahan militer Jepang . Mereka adalah Ir . Sukarno sebagai Somubu (pimpinan Departemen Urusan Umum), Mr . Suwandi sebagai Naimubu (pimpinan Departemen Urusan Dalam Negeri), Dr . Abdul Rasyid sebagai wakil Naimubu, Prof . Mr . Dr . Soepomo sebagai Syihobu (pimpinan Departemen Kehakiman), Mochtar bin Prabu Mangkunegoro sebagai Kosubu (pimpinan Departemen Lalu Lintas), Mr . Muhammad Yamin sebagai Sendenbu (pimpinan Departemen Propaganda), dan Prawoto Sumodilogo sebagai Sangyobu (pimpinan Depatemen Ekonomi) .</p>
+
+                            <p>Di tingkat daerah, pemerintah militer Jepang menghapus tiga provinsi di Pulau Jawa yaitu Jawa Barat, Jawa Tengah, dan Jawa Timur . Sebagai gantinya, pada 8 Agustus 1942 dibentuk 17 daerah syu yang dipimpin oleh seorang syucokan (setara dengan jabatan residen pada masa kolonial namun kekuasaannya seperti seorang gubernur) . Pada titik ini, nama Soerjo yang telah dikenal sebagai salah satu bupati yang cakap dalam memimpin wilayah administrasinya ditunjuk Pemerintah Militer Jepang sebagai syucokan di wilayah Bojonegoro pada 10 November 1943 .</p>
+
+                            <p>Pada tahun 1943 posisi pasukan Jepang dalam Perang Asia Timur Raya mulai mendapat pukulan balik dari Tentara Sekutu . Jalannya perang tersebut sedikit demi sedikit mulai menyudutkan posisi pasukan Jepang, sehingga pemerintah militer Jepang menghidupkan rencana memberi janji kemerdekaan Indonesia . Pada 1 Maret 1945, dibentuk Badan Penyelidik Usaha-usaha Persiapan Kemerdekaan Indonesia yang beranggotakan 68 tokoh terkemuka di Indonesia . Namun belum lagi janji kemerdekaan tersebut diwujudkan, Jepang menyerah tanpa syarat kepada Pasukan Sekutu setelah kota Hiroshima dan Nagasaki dibom atom oleh Amerika Serikat .</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
+
+    <!-- Scripts -->
+    
+    <script src="assets/js/leaflet.js"></script>
+    <script src="assets/js/event.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/maps/map-jatim-1943.js"></script>
+    <script src="assets/js/run.js"></script>
+
+    <script type="text/javascript">
+
+        myAutoModal();
+        //Get the Modal
+        var modal = document.getElementById("myModal");
+
+        function myAutoModal(){
+            setTimeout(function(){
+                modal.style.display = "block";
+
+                document.getElementById('playauto').play();
+
+                
+                }, 1000);
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                  modal.style.display = "none";
+
+                  document.getElementById('playauto').pause();
+                }
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        function myOnclick(){
+          modal.style.display = "block";
+ 
+
+          document.getElementById('playauto').play();
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+
+          document.getElementById('playauto').pause();
+        }
+    </script>
+
+    <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("nav");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+    <!-- <script>
+
+      // Nothing new here...it's all in the CSS!
+      // And don't forget to activate the pointerEvents option
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
+    </script> -->
+
+</body>
+</html>

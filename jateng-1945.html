@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html manifest="appcache.manifest">
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Atlas Gubernur Pertama Indonesia</title>
+
+    <!-- bootstrap CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/leaflet.css">
+
+</head>
+<body>
+
+    <div class="navbari" id="myDIV">
+      <a href="index.html" class="nav">ATLAS</a>
+      <a href="jateng.html" class="nav">1892</a>
+      <a href="jateng-1919.html" class="nav">1919</a>
+      <a href="jateng-1924.html" class="nav">1924</a>
+      <a href="jateng-1943.html" class="nav">1943</a>
+      <a href="jateng-1945.html" class="nav active">1945</a>
+      <a href="jateng-1950.html" class="nav">1950</a>
+      <a href="jateng-1954.html" class="nav">1954</a>
+      <a href="jateng-1966.html" class="nav">1966-1979</a>
+      <a href="jateng-1981.html" class="nav">1981</a>
+    </div>
+
+    <div id="map"></div>
+
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+            <div class="modal-content" style="overflow-y: scroll; overflow-x: hidden; max-height: 100%">
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        <!-- <div class="col-md-12 center-img">
+                            <video id="playauto" width="439" height="360" style="padding-top: 113px;" controls>
+                                <source src="assets/video/palembang.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/png/holand-island.png">
+                        </div> -->
+                        <div class="text">
+                            
+                            <h2>Menjadi Gubernur Jawa Tengah</h2>
+
+                            <p>Pada masa awal kemerdekaan, jabatan Soeroso bertambah yakni sebagai wakil ketua Panitia Persiapan Kemerdekaan Indonesia (PPKI) yang diketuai oleh Dr . Radjiman Wedyodiningrat . Dalam sidang kedua PPKI tanggal 19 Agustus 1945 dibahas mengenai pembagian wilayah administrasi Indonesia merdeka . Saat itu diputuskan bahwa wilayah Indonesia dibagi menjadi delapan provinsi, yakni Sumatera, Jawa Barat, Jawa Tengah, Jawa Timur, Kalimantan, Sulawesi, Sunda Kecil atau Nusatenggara, dan Maluku . Masing-masing dikepalai oleh seorang gubernur . Presiden Sukarno mengangkat  R .P .  Soeroso  sebagai  Gubernur  Provinsi  Jawa  Tengah  merangkap  Residen  Kedu  di tengah situasi politik yang tidak menentu karena Secara de jure kekuasaan di tangan Sekutu, sedangkan de facto diserahkan kepada Jepang .</p>
+
+                            <p>Ketika  R .P .  Soeroso  menjabat  sebagai  Gubernur  Jawa  Tengah,    pada  akhir  1945  dia  sempat didatangi oleh seorang perwira RAF (Angkatan Udara Kerajaan Inggris) yang mengaku datang   ke Jawa Tengah untuk mengurus keamanan orang Eropa termasuk warga Belanda . Selain orang Inggris, datang pula orang Belanda yang mengaku sebagai kepala Palang Merah Internasional dan bermaksud bertemu dengan pejabat Jepang untuk mengatur mereka di daerah Jawa Tengah terutama Magelang . Orang Belanda tersebut kemudian berhasil mengumpulkan 400 orang mantan anggota KNIL untuk menjadi perawat . Kekuasaan de facto yang dimiliki oleh Jepang terhadap Indonesia tidak dapat menjadi jaminan bahwa Jepang berani menolak permintaan orang-orang Belanda  yang  mengatasnamakan  Sekutu  tersebut .  Namun  alih-alih  menjadi  takut,  R .P .  Soeroso justru berani membubarkan kumpulan orang-orang Belanda tersebut dan meminta pemimpin Palang Merah Internasional untuk meninggalkan wilayah Magelang secepatnya . Selain berani mengambil tindakan, Soeroso juga seorang yang sabar dan tenang dalam menghadapi teror yang dilakukan pihak Belanda termasuk ancaman penyerbuan terhadap kedudukan para pejabat Republik Indonesia .</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
+
+    <!-- Scripts -->
+    
+    <script src="assets/js/leaflet.js"></script>
+    <script src="assets/js/event.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/maps/map-jateng-1945.js"></script>
+    <script src="assets/js/run.js"></script>
+
+    <script type="text/javascript">
+
+        myAutoModal();
+        //Get the Modal
+        var modal = document.getElementById("myModal");
+
+        function myAutoModal(){
+            setTimeout(function(){
+                modal.style.display = "block";
+
+                document.getElementById('playauto').play();
+
+                
+                }, 1000);
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                  modal.style.display = "none";
+
+                  document.getElementById('playauto').pause();
+                }
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        function myOnclick(){
+          modal.style.display = "block";
+ 
+
+          document.getElementById('playauto').play();
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+
+          document.getElementById('playauto').pause();
+        }
+    </script>
+
+    <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("nav");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+    <!-- <script>
+
+      // Nothing new here...it's all in the CSS!
+      // And don't forget to activate the pointerEvents option
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
+    </script> -->
+
+</body>
+</html>

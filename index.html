@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html manifest="appcache.manifest">
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	
+	<title>Atlas Gubernur Pertama Indonesia</title>
+
+	<!-- bootstrap CSS file -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/loading-bar.css">
+
+	<!-- main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/leaflet.css">	
+
+	
+</head>
+
+<body id="demo">
+
+	<div class="peta">
+		<img src="assets/images/jpg/peta_indonesia.jpg">
+	</div>
+
+	<!-- <div id="map"></div> -->
+	
+	<div class="gub_sumatera"><a href="sumatera_1905.html"><img src="assets/images/png/flag_sumatera.png"></a></div>
+	<div class="gub_kalimantan"><a href="kalimantan.html"><img src="assets/images/png/flag_kalimantan.png"></a></div>
+	<div class="gub_sulawesi"><a href="sulawesi.html"><img src="assets/images/png/flag_sulawesi.png"></a></div>
+	<div class="gub_maluku"><a href="maluku.html"><img src="assets/images/png/flag_maluku.png"></a></div>
+	<div class="gub_jabar"><a href="jabar.html"><img src="assets/images/png/flag_jabar.png"></a></div>
+	<div class="gub_jateng"><a href="jateng.html"><img src="assets/images/png/flag_jateng.png"></a></div>
+	<div class="gub_jatim"><a href="jatim.html"><img src="assets/images/png/flag_jatim.png"></a></div>
+	<div class="gub_sundakecil"><a href="sunkel.html"><img src="assets/images/png/flag_sundakecil.png"></a></div>
+
+	<div id="loader-wrapper">
+
+		<div id="loader"></div>
+
+		<div class="loader-section section-left">
+			
+		</div>
+
+        <div class="loader-section section-right">
+        	<img src="assets/images/png/background_welcome.png">
+        	<div class="text_welcome">
+        		
+        	</div>
+
+        </div>
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/leaflet.js"></script>
+	<script src="assets/js/event.js"></script>
+	<script src="assets/js/storage.js"></script>
+	<script src="assets/js/maps/map-index.js"></script>
+	<script src="assets/js/run.js"></script>
+<!-- loader js -->
+	<script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="assets/js/main_loader.js"></script>
+
+<!-- Add active class to the current button (highlight it) -->
+	<!-- <script>
+	
+	var header = document.getElementById("myDIV");
+	var btns = header.getElementsByClassName("nav");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function() {
+	  var current = document.getElementsByClassName("active");
+	  current[0].className = current[0].className.replace(" active", "");
+	  this.className += " active";
+	  });
+	}
+	</script> -->
+
+	<!-- <script>
+		window.onload = function(){zoom(1)}
+
+
+		function zoom(zm) {
+		img=document.getElementById("pic")
+		wid=img.width
+		ht=img.height
+		img.style.width=(wid*zm)+"px"
+		img.style.height=(ht*zm)+"px"
+		    // img.style.marginLeft = -(img.width/2) + "px";
+		    // img.style.marginTop = -(img.height/2) + "px";
+		}
+	</script> -->
+	
+
+	<!-- <script>
+
+	  // Nothing new here...it's all in the CSS!
+	  // And don't forget to activate the pointerEvents option
+	  var scene = document.getElementById('scene');
+	  var parallax = new Parallax(scene);
+
+	</script> -->
+<script src="./renderer.js"></script>
+</body>
+</html>

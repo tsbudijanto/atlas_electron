@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html manifest="appcache.manifest">
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Atlas Gubernur Pertama Indonesia</title>
+
+    <!-- bootstrap CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/leaflet.css">
+
+</head>
+<body>
+
+    <div class="navbari" id="myDIV">
+      <a href="index.html" class="nav">ATLAS</a>
+      <a href="jateng.html" class="nav">1892</a>
+      <a href="jateng-1919.html" class="nav active">1919</a>
+      <a href="jateng-1924.html" class="nav">1924</a>
+      <a href="jateng-1943.html" class="nav">1943</a>
+      <a href="jateng-1945.html" class="nav">1945</a>
+      <a href="jateng-1950.html" class="nav">1950</a>
+      <a href="jateng-1954.html" class="nav">1954</a>
+      <a href="jateng-1966.html" class="nav">1966-1979</a>
+      <a href="jateng-1981.html" class="nav">1981</a>
+    </div>
+
+    <div id="map"></div>
+
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+            <div class="modal-content" style="overflow-y: scroll; overflow-x: hidden; max-height: 100%">
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        <!-- <div class="col-md-12 center-img">
+                            <video id="playauto" width="439" height="360" style="padding-top: 113px;" controls>
+                                <source src="assets/video/palembang.mp4" type="video/mp4">
+                            </video>
+                            <img src="assets/images/png/holand-island.png">
+                        </div> -->
+                        <div class="text">
+                            
+                            <h2>Ketua Pengurus Besar Perhimpunan Pegawai (Burgerlijke Openbare Werken) BOW dan Presiden Sarekat Islam</h2>
+
+                            <p>
+                              R . P . Soeroso pindah ke Mojokerto, Jawa Timur . Ia tetap sebagai ketua BOW, dan kemudian Presiden Sarekat Islam Kabupaten Mojokerto . Dalam selang waktu tiga tahun, Soeroso menjadi Ketua Personil Pabrik Bond Daerah Mojokerto 
+                            </p>
+
+                            <p>Pada 1916, R . P . Soeroso terpilih menjadi ketua Pengurus Besar Perhimpunan Pegawai (Burgerlijke Openbare Werken; BOW) seluruh Indonesia . Setahun kemudian (1917), ia dipilih kembali menjadi anggota Gemeenteraad Probolinggo . Dalam posisi itu, Soeroso membela hak-hak pedagang kecil agar tidak mendapat perlakuan buruk dari pemerintah setempat, ia memperjuangkan warung atau kios milik pedagang kecil di pinggir jalan agar tidak dibongkar oleh pihak tertentu terutama kelompok pedagang besar ataupun pemerintah. </p>
+
+                            <p>Di daerah gemeente yang mayoritas dihuni orang Belanda dimana hak-hak penduduk pribumi menjadi terpinggirkan, Soeroso konsisten membela kepentingan masyarakat pribumi . Ia memperjuangkan penerangan listrik di kampung, akses terhadap air minum, pembuatan jalan kampung, dan berbagai hal lain yang berpengaruh besar dan menyentuh kehidupan sehari-hari orang-orang kecil di wilayah tersebut. </p>
+
+                            <p>Pada 1918, R . P . Soeroso diangkat sebagai Commisaris Centraal Bestuur Sarekat Islam . Setahun berikutnya ia pindah ke Mojokerto, Jawa Timur . Ia tetap menjabat sebagai ketua BOW, dan kemudian Presiden Sarekat Islam Kabupaten Mojokerto . Dalam selang waktu tiga tahun, Soeroso menjadi Ketua Personil Pabrik Bond Daerah Mojokerto . Saat itulah ia sempat memimpin pemogokan buruh pabrik gula milik orang Belanda yang berjumlah 12 pabrik . Pemogokan menuntut perbaikan nasib buruh pabrik yang dirasakan masih di bawah ukuran layak . Tak pelak, pemogokan itu dianggap sebagai simbol nyata perlawanan terhadap kolonialisme Belanda. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
+
+    <!-- Scripts -->
+    
+    <script src="assets/js/leaflet.js"></script>
+    <script src="assets/js/event.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/maps/map-jateng-1919.js"></script>
+    <script src="assets/js/run.js"></script>
+
+    <script type="text/javascript">
+
+        myAutoModal();
+        //Get the Modal
+        var modal = document.getElementById("myModal");
+
+        function myAutoModal(){
+            setTimeout(function(){
+                modal.style.display = "block";
+
+                document.getElementById('playauto').play();
+
+                
+                }, 1000);
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                  modal.style.display = "none";
+
+                  document.getElementById('playauto').pause();
+                }
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        function myOnclick(){
+          modal.style.display = "block";
+ 
+
+          document.getElementById('playauto').play();
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+
+          document.getElementById('playauto').pause();
+        }
+    </script>
+
+    <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("nav");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+    <!-- <script>
+
+      // Nothing new here...it's all in the CSS!
+      // And don't forget to activate the pointerEvents option
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
+    </script> -->
+
+</body>
+</html>
